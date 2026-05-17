@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persoane 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="persoane.xsd">
+
+    <persoana id="1">
+        <nume>Popescu</nume>
+        <prenume>Ion</prenume>
+        <varsta>23</varsta>
+
+    <DateCV>
+        <experienta_profesionala>Marketing digital</experienta_profesionala>
+        <Educatie>Licenta in marketing</Educatie>
+        <Limbi_straine>Engleza Franceza</Limbi_straine>
+        <Competente_digitale>Google ADS</Competente_digitale>
+        <Info_suplimentare>Permis conducere</Info_suplimentare>
+    </DateCV>
+    <adresa>
+        <strada>Strada Anastasie Panu</strada>
+        <numar>29</numar>
+        <localitate>Iasi</localitate>
+        <judet>Iasi</judet>
+        <tara>Romania</tara>
+    </adresa>
+    </persoana>
+    
+    <persoana id="2">
+        <nume>Mircilescu</nume>
+        <prenume>Cosmin</prenume>
+        <varsta>21</varsta>
+
+    <DateCV>
+        <experienta_profesionala>Software Engineer</experienta_profesionala>
+        <Educatie>Licenta in Tehnologia Informatiei</Educatie>
+        <Limbi_straine>Engleza</Limbi_straine>
+        <Competente_digitale>Google ADS</Competente_digitale>
+        <Info_suplimentare>Permis conducere</Info_suplimentare>
+    </DateCV>
+    <adresa>
+        <strada>Strada Teascului</strada>
+        <numar>22</numar>
+        <localitate>Iasi</localitate>
+        <judet>Iasi</judet>
+        <tara>Romania</tara>
+    </adresa>
+    </persoana>
+</persoane>

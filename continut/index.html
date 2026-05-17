@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoJocuri</title>
+    <link rel="stylesheet" href="css/stil.css">
+
+    <script>
+        function schimbaContinut(resursa, jsFisier, jsFunctie) {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState === 4) {
+                    if (this.status === 200) {
+                        document.getElementById("continut").innerHTML = this.responseText;
+
+                        if (jsFisier) {
+                            var scriptVechi = document.getElementById("script-dinamic");
+                            if (scriptVechi) {
+                                scriptVechi.remove();
+                            }
+
+                            var elementScript = document.createElement("script");
+                            elementScript.id = "script-dinamic";
+                            elementScript.src = jsFisier;
+
+                            elementScript.onload = function () {
+                                if (jsFunctie && typeof window[jsFunctie] === "function") {
+                                    window[jsFunctie]();
+                                }
+                            };
+
+                            document.head.appendChild(elementScript);
+                        } else {
+                            if (jsFunctie && typeof window[jsFunctie] === "function") {
+                                window[jsFunctie]();
+                            }
+                        }
+                    } else {
+                        document.getElementById("continut").innerHTML =
+                            "<p>Eroare la încărcarea paginii.</p>";
+                    }
+                }
+            };
+
+            xhttp.open("GET", resursa + ".html", true);
+            xhttp.send();
+        }
+    </script>
+</head>
+
+<body onload="schimbaContinut('acasa')">
+    <header>
+        <h1>InfoJocuri</h1>
+        <p><em>Ghidul tău complet pentru jocurile video pe PC</em></p>
+    </header>
+
+    <nav>
+    <div class="logo"></div>
+
+    <a onclick="schimbaContinut('acasa')">Acasă</a>
+    <a onclick="schimbaContinut('inregistreaza', 'js/inregistreaza.js', 'initInregistrare')">Înregistrează</a>
+    <a onclick="schimbaContinut('video')">Video</a>
+    <a onclick="schimbaContinut('despre')">Despre</a>
+    <a onclick="schimbaContinut('desen')">Desen</a>
+    <a onclick="schimbaContinut('invat', 'js/script.js')">Învață</a>
+    <a onclick="schimbaContinut('persoane', 'js/Persoane.js', 'incarcaPersoane')">Persoane</a>
+    <a onclick="schimbaContinut('verifica', 'js/verifica.js')">Verifică</a>
+</nav>
+
+    <main id="continut"></main>
+
+    <footer>
+        <p>&copy; 2025. InfoJocuri - Jocuri video pe PC</p>
+    </footer>
+</body>
+</html>

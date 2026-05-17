@@ -1,0 +1,122 @@
+<style>
+    .zona-desen {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .zona-desen h2 {
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    .zona-desen p {
+        color: black;
+        margin-bottom: 20px;
+    }
+
+    .svg-joc {
+        max-width: 900px;
+        width: 100%;
+        height: auto;
+        border: 2px solid #00bcd4;
+        border-radius: 12px;
+        background: #0b1020;
+    }
+
+    .anim {
+        transition: fill 0.3s ease, opacity 0.3s ease;
+    }
+
+    .buton:hover {
+        fill: #ff9800;
+    }
+
+    .ecran:hover {
+        fill: #1e88e5;
+    }
+
+    .text-joc {
+        transition: fill 0.3s ease;
+    }
+
+    .text-joc:hover {
+        fill: #ffffff;
+    }
+
+    .stea {
+        transition: fill 0.3s ease;
+    }
+
+    .stea:hover {
+        fill: #ffd54f;
+    }
+</style>
+
+<div class="zona-desen">
+    <h2>Desen SVG</h2>
+    <p>Setup de gaming pentru jocuri pe PC</p>
+
+    <svg class="svg-joc" viewBox="0 0 900 500">
+
+        <defs>
+            <linearGradient id="fundalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#10172a"/>
+                <stop offset="100%" stop-color="#050814"/>
+            </linearGradient>
+
+            <linearGradient id="ecranGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e5ff"/>
+                <stop offset="100%" stop-color="#1565c0"/>
+            </linearGradient>
+
+            <linearGradient id="birouGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#5d4037"/>
+                <stop offset="100%" stop-color="#8d6e63"/>
+            </linearGradient>
+
+            <radialGradient id="luminaGradient" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ab47bc"/>
+                <stop offset="100%" stop-color="#4527a0"/>
+            </radialGradient>
+        </defs>
+
+        <rect x="0" y="0" width="900" height="500" fill="url(#fundalGradient)"/>
+
+        <circle class="anim" cx="120" cy="80" r="45" fill="url(#luminaGradient)"/>
+        <circle class="anim" cx="780" cy="90" r="35" fill="url(#luminaGradient)"/>
+
+        <polygon class="stea" points="220,70 228,88 248,90 233,103 238,122 220,111 202,122 207,103 192,90 212,88" fill="#fff176"/>
+        <polygon class="stea" points="700,60 707,75 724,77 711,89 715,106 700,97 685,106 689,89 676,77 693,75" fill="#fff176"/>
+
+        <rect x="180" y="340" width="540" height="25" fill="url(#birouGradient)"/>
+        <rect x="430" y="365" width="40" height="70" fill="#6d4c41"/>
+        <rect x="390" y="435" width="120" height="12" rx="4" fill="#8d6e63"/>
+
+        <rect x="300" y="130" width="300" height="170" rx="12" fill="#263238" stroke="#00bcd4" stroke-width="4"/>
+        <rect class="anim ecran" x="320" y="150" width="260" height="130" rx="8" fill="url(#ecranGradient)"/>
+
+        <path d="M340 245 Q390 200 440 230 T540 205" fill="none" stroke="#ffffff" stroke-width="4"/>
+        <circle class="anim" cx="390" cy="185" r="10" fill="#ff5252"/>
+        <circle class="anim" cx="480" cy="210" r="8" fill="#69f0ae"/>
+        <circle class="anim" cx="530" cy="180" r="12" fill="#ffd740"/>
+
+        <rect x="430" y="300" width="40" height="30" fill="#37474f"/>
+        <rect x="405" y="330" width="90" height="10" rx="4" fill="#546e7a"/>
+
+
+
+
+        <rect x="660" y="180" width="70" height="140" rx="10" fill="#111111" stroke="#00bcd4" stroke-width="3"/>
+        <circle class="buton" cx="695" cy="205" r="8" fill="#66bb6a"/>
+        <rect x="675" y="225" width="40" height="70" rx="6" fill="#1e1e1e"/>
+
+        <text class="text-joc" x="450" y="95" text-anchor="middle" font-size="30" fill="#00e5ff">
+            GAMING ROOM
+        </text>
+
+        <text class="text-joc" x="450" y="470" text-anchor="middle" font-size="22" fill="#b2ebf2">
+            Jocuri video pe PC
+        </text>
+
+    </svg>
+</div>

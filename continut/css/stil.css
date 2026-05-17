@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.logo {
+  width: 150px;      
+  height: 50px;      
+  background-image: url('/home/student/proiect-1-DavidCopa-dev/continut/imagini/Game-Boy-FL-removebg-preview.png');
+  background-size: contain;  
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body{
+    background-color: blanchedalmond;
+}
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}

@@ -1,0 +1,81 @@
+<h2>Creează-ți profilul de gamer</h2>
+<p>Completează formularul de mai jos pentru a te alătura comunității InfoJocuri.</p>
+
+<form id="formInregistrare">
+    <fieldset>
+        <legend>Informații generale</legend>
+
+        <label for="username">Nume utilizator:</label><br>
+        <input type="text" id="username" name="username" placeholder="username" required><br><br>
+
+        <label for="parola">Parolă:</label><br>
+        <input type="password" id="parola" name="parola" required><br><br>
+
+        <label for="nume">Nume:</label><br>
+        <input type="text" id="nume" name="nume" placeholder="Nume"><br><br>
+
+        <label for="prenume">Prenume:</label><br>
+        <input type="text" id="prenume" name="prenume" placeholder="Prenume"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="email@exemplu.com"><br><br>
+
+        <label for="telefon">Telefon:</label><br>
+        <input type="tel" id="telefon" name="telefon" placeholder="+40 700 000 000"><br><br>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Informații personale</legend>
+
+        <label for="sex">Sex:</label><br>
+        <select id="sex" name="sex">
+            <option value="">-- Selectează --</option>
+            <option value="masculin">Masculin</option>
+            <option value="feminin">Feminin</option>
+            <option value="altul">Altul</option>
+        </select><br><br>
+
+        <label for="joc_preferat">Jocul preferat:</label><br>
+        <input type="text" id="joc_preferat" name="joc_preferat" list="jocuri" placeholder="Introdu sau alege un joc">
+        <datalist id="jocuri">
+            <option value="Minecraft">
+            <option value="Counter-Strike 2">
+            <option value="Doom">
+            <option value="Diablo IV">
+            <option value="StarCraft II">
+            <option value="Half-Life">
+            <option value="The Witcher 3">
+            <option value="Civilization VI">
+            <option value="Tetris">
+            <option value="Quake">
+        </datalist><br><br>
+
+        <label for="culoare">Culoarea preferată:</label><br>
+        <input type="color" id="culoare" name="culoare" value="#1a6b2e"><br><br>
+
+        <label for="data_nasterii">Data nașterii:</label><br>
+        <input type="date" id="data_nasterii" name="data_nasterii"><br><br>
+
+        <label for="ora_nasterii">Ora nașterii:</label><br>
+        <input type="time" id="ora_nasterii" name="ora_nasterii"><br><br>
+
+        <label for="varsta">Vârstă (ani de gaming): <span id="varsta_val">15</span></label><br>
+        <input type="range" id="varsta" name="varsta" min="1" max="50" value="15"
+               oninput="document.getElementById('varsta_val').textContent = this.value"><br><br>
+
+        <label for="website">Adresa paginii personale:</label><br>
+        <input type="url" id="website" name="website" placeholder="https://www.exemplu.com"><br><br>
+
+        <label for="descriere">Descriere:</label><br>
+        <textarea id="descriere" name="descriere" rows="5" cols="40"
+            placeholder="Spune-ne câteva cuvinte despre tine și pasiunea ta pentru gaming..."></textarea><br><br>
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Înregistrează</button>
+</form>
+
+<p id="mesaj_inregistrare"></p>
